@@ -61,9 +61,9 @@ public:
     void AddDocument(int document_id, const string& document) {
         ++document_count_;
         const vector<string> words = SplitIntoWordsNoStop(document);
-        for (const auto& word : words) {
-            int count_words = count(words.begin(), words.end(), word);
-            const double tf_count = static_cast<double>(count_words) / static_cast<double>(words.size());
+        const double tf_count = 1.0 / words.size();
+
+        for (const string& word : words) {
             word_to_document_freqs_[word][document_id] += tf_count;
         }
     }
