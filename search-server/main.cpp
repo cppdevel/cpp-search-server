@@ -140,7 +140,7 @@ private:
     }
 
     double IDFWord(const string& word) const {
-        double idf = log((static_cast<double>(document_count_)) / static_cast<double>(word_to_document_freqs_.at(word).size()));
+        double idf = log((static_cast<double>(document_count_)) / word_to_document_freqs_.at(word).size());
         return idf;
     }
 
