@@ -1,5 +1,6 @@
 #pragma once
 
+#include "document.h"
 #include "read_input_functions.h"
 #include "string_processing.h"
 

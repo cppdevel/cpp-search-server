@@ -2,8 +2,6 @@
 
 #include <iostream>
 
-using namespace std::string_literals;
-
 std::string ReadLine() {
     std::string s;
     std::getline(std::cin, s);
